@@ -1,6 +1,8 @@
 import { Poppins, Teko } from "next/font/google";
 import "./globals.css";
 import SEO from "@/components/seo";
+import Navbar from "@/components/common/Nav";
+import Footer from "@/components/common/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,7 +31,19 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${poppins.variable} ${teko.variable} font-poppins`}>
-        {children}
+        {/* Footer part */}
+        <div>
+          <Navbar />
+        </div>
+
+        {/* Body content */}
+        <section>
+          {children}
+        </section>
+
+        <div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
