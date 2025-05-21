@@ -17,9 +17,11 @@ const teko = Teko({
 });
 
 export const metadata = {
-  title: "Default Title | Your Store",
-  description: "Default description for your store",
-  keywords: "default, keywords, here"
+  title: "Sarvam Safety | Best Safety Equipment Supplier in India",
+  description:
+    "As a well-renowned safety equipment supplier, we offer a wide selection of safety equipment, industrial safety products, production consumables,etc. We are committed to providing the best safety tools and equipment for our consumers.",
+  keywords:
+    "Safety Equipment Supplier, safety product supplier, safety products online, Industrial Safety Products, construction safety products, PPE, industrial safety equipment, safety equipment near me, fire safety products, safety tools and equipment"
 };
 
 export default function RootLayout({ children }) {
