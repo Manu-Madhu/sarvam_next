@@ -10,7 +10,6 @@ export async function getMainSlider() {
 
   const data = await res.json();
 
-  console.log(data);
   const processedData = data.response.data.map(item => ({
     ...item,
     bnr_banner: `${IMAGE_BASE_URL}/banner/${item.bnr_banner}`

@@ -14,8 +14,6 @@ const HeroCarousel = () => {
     const fetchSlides = async () => {
       try {
         const data = await getMainSlider();
-
-        console.log(data);
         setSlides(data);
         setLoading(false);
       } catch (err) {
