@@ -1,5 +1,4 @@
 import React from "react";
-import ContainerWrapper from "./ui/containerWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import { BsSearch } from "react-icons/bs";
@@ -7,6 +6,7 @@ import { BsCart } from "react-icons/bs";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { NavData } from "@/utils/Nav";
 import { LuMenu } from "react-icons/lu";
+import ContainerWrapper from "./ui/ContainerWrapper.jsx";
 
 const Navbar = () => {
   return (
