@@ -48,9 +48,9 @@ export async function getSeoData(page = "home") {
     return {
       title: `Sarvam Safety | ${page.charAt(0).toUpperCase() + page.slice(1)}`,
       description:
-        "As a well-renowned safety equipment supplier, we offer a wide selection of safety equipment, industrial safety products, production consumables,etc. We are committed to providing the best safety tools and equipment for our consumers.",
+        "As a well-renowned safety equipment supplier,",
       keywords:
-        "Safety Equipment Supplier, safety product supplier, safety products online, Industrial Safety Products, construction safety products, PPE, industrial safety equipment, safety equipment near me, fire safety products, safety tools and equipment"
+        "Industrial Safety Products, construction safety products,"
     };
   }
 }
