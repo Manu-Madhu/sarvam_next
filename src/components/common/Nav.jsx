@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <main>
       {/* top part */}
-      <div className="bg-primary p-2 font-sans">
+      <div className="bg-primary p-3 font-sans">
         <ContainerWrapper className={""}>
           <div className="flex justify-end items-center gap-10 text-[14px] font-[500] text-white">
             <div className="relative">
