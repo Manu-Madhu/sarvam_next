@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/common/Nav";
 import Footer from "@/components/common/Footer";
 import { getSeoData } from "@/utils/api";
+import { GLOBAL_METADATA } from "@/utils/seo";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export async function generateMetadata() {
   const seoData = await getSeoData("home");
 
   return {
+    ...GLOBAL_METADATA.openGraph,
     title: seoData.title,
     description: seoData.description,
     keywords: seoData.keywords,
@@ -29,13 +31,14 @@ export async function generateMetadata() {
       type: "website"
     },
     twitter: {
+      ...GLOBAL_METADATA.openGraph,
       card: "summary_large_image",
       title: seoData.title,
       description: seoData.description
     },
     alternates: {
-      canonical: "https://www.sarvamsafety.com/",
-    },
+      canonical: "https://www.sarvamsafety.com/"
+    }
   };
 }
 export default function RootLayout({ children }) {
