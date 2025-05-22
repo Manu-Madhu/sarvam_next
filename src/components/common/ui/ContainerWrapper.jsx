@@ -5,7 +5,7 @@ const ContainerWrapper = ({ children, className }) => {
   return (
     <div
       className={classNames(
-        "max-w-[1300px] mx-auto w-full overflow-hidden",
+        "max-w-[1320px] mx-auto w-full overflow-hidden",
         className
       )}
     >

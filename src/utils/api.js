@@ -1,7 +1,8 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.sarvamsafety.com";
-const IMAGE_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.sarvamsafety.com";
+import { API_BASE_URL } from "./endPoints";
 
 //----------- HOME START------------ //
+
+// Banner
 export async function getMainSlider() {
   const res = await fetch(`${API_BASE_URL}/website/open/read/getmainlsider`);
   if (!res.ok) {
@@ -12,12 +13,26 @@ export async function getMainSlider() {
 
   const processedData = data.response.data.map(item => ({
     ...item,
-    bnr_banner: `${IMAGE_BASE_URL}/banner/${item.bnr_banner}`
+    bnr_banner: `${API_BASE_URL}/banner/${item.bnr_banner}`
   }));
 
   return processedData;
 }
+
+// Supplier
+export async function getSupplier() {
+  const res = await fetch(`${API_BASE_URL}/website/open/read/supplierdata`);
+  if (!res.ok) {
+    throw new Error("Failed to fetch supplier data");
+  }
+
+  const data = await res.json();
+
+  return data?.response?.data;
+}
+
 //----------- HOME END------------ //
+
 
 
 //----------- SEO START------------ //
@@ -47,10 +62,8 @@ export async function getSeoData(page = "home") {
     // Return default values
     return {
       title: `Sarvam Safety | ${page.charAt(0).toUpperCase() + page.slice(1)}`,
-      description:
-        "As a well-renowned safety equipment supplier,",
-      keywords:
-        "Industrial Safety Products, construction safety products,"
+      description: "As a well-renowned safety equipment supplier,",
+      keywords: "Industrial Safety Products, construction safety products,"
     };
   }
 }

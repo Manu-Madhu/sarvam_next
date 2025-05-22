@@ -1,5 +1,5 @@
 import HeroCarousel from "@/components/Home/HeroCarousel";
-import Image from "next/image";
+import HomeAbout from "@/components/Home/HomeAbout";
 
 export default function Home() {
   return (
@@ -7,7 +7,8 @@ export default function Home() {
       {/* Carousel */}
       <HeroCarousel />
 
-      {/*  */}
+      {/* About part */}
+      <HomeAbout />
     </div>
   );
 }

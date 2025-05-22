@@ -38,7 +38,7 @@ const HeroCarousel = () => {
     [slides]
   );
 
-  if (loading) return <div className="h-[25vh] md:h-[78vh] bg-gray-200 animate-pulse" />;
+  if (loading) return <div className="h-[25vh] md:h-[80vh] bg-gray-200 animate-pulse" />;
   if (error)
     return (
       <div className="text-red-500">
@@ -48,7 +48,7 @@ const HeroCarousel = () => {
   if (slides.length === 0) return <div>No slides available</div>;
 
   return (
-    <div className="relative w-full h-[25vh] md:h-[80vh] overflow-hidden">
+    <div className="relative w-full h-[25vh] xl:h-[80vh] overflow-hidden">
       {slides.map((slide, index) =>
         <div
           key={index}
@@ -63,7 +63,7 @@ const HeroCarousel = () => {
               alt={slide.bnr_name}
               title={slide.bnr_name}
               fill
-              className="md:object-cover"
+              className="lg:object-cover"
               priority={index === 0}
             />
           </a>
@@ -71,7 +71,7 @@ const HeroCarousel = () => {
       )}
 
       {/* Navigation dots */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+      <div className="absolute bottom-5 left-0 right-0 flex justify-center gap-2">
         {slides.map((_, index) =>
           <button
             key={index}
