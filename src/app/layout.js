@@ -32,7 +32,10 @@ export async function generateMetadata() {
       card: "summary_large_image",
       title: seoData.title,
       description: seoData.description
-    }
+    },
+    alternates: {
+      canonical: "https://www.sarvamsafety.com/",
+    },
   };
 }
 export default function RootLayout({ children }) {
