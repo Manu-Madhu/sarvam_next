@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/common/Nav";
 import Footer from "@/components/common/Footer";
 import { getSeoData } from "@/utils/api";
-import { GLOBAL_METADATA } from "@/utils/seo";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,52 +16,64 @@ const teko = Teko({
   variable: "--font-teko"
 });
 
+// Global metadata defaults
+const GLOBAL_METADATA = {
+  authors: [{ name: "Sarvam Safety Team" }],
+  publisher: "Sarvam Safety Equipment Private Limited",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    }
+  },
+  icons: {
+    icon: "/assets/favicon.png",
+    apple: "/assets/apple-touch-icon.png",
+  },
+};
+
 export async function generateMetadata() {
   const seoData = await getSeoData("home");
 
   return {
-    ...GLOBAL_METADATA.openGraph,
+    ...GLOBAL_METADATA, // Spread global defaults first
     title: seoData.title,
     description: seoData.description,
     keywords: seoData.keywords,
-    openGraph: {
-      title: seoData.title,
-      description: seoData.description,
-      type: "website"
-    },
-    twitter: {
-      ...GLOBAL_METADATA.openGraph,
-      card: "summary_large_image",
-      title: seoData.title,
-      description: seoData.description
-    },
     alternates: {
       canonical: "https://www.sarvamsafety.com/"
-    }
+    },
+    openGraph: {
+      ...GLOBAL_METADATA.openGraph, // Spread OG defaults if any
+      title: seoData.title,
+      description: seoData.description,
+      type: "website",
+      url: "https://www.sarvamsafety.com/",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seoData.title,
+      description: seoData.description,
+    },
   };
 }
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Only non-metadata tags should be here */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/favicon.png" />
+        
+        {/* Preloads, scripts, etc. can stay */}
       </head>
       <body className={`${poppins.variable} ${teko.variable} font-poppins`}>
-        {/* Footer part */}
-        <div>
-          <Navbar />
-        </div>
-
-        {/* Body content */}
-        <section>
-          {children}
-        </section>
-
-        <div>
-          <Footer />
-        </div>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
