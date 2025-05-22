@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output:"standalone",
   images: {
-    domains: ["api.sarvamsafety.com"]
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.sarvamsafety.com"
+      }
+    ]
   }
 };
 
