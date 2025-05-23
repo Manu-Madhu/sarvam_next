@@ -1,7 +1,6 @@
-import { API_BASE_URL } from "./endPoints";
+import { API_BASE_URL } from "../utils/endPoints";
 
 //----------- HOME START------------ //
-
 // Banner
 export async function getMainSlider() {
   const res = await fetch(`${API_BASE_URL}/website/open/read/getmainlsider`);
@@ -30,9 +29,24 @@ export async function getSupplier() {
 
   return data?.response?.data;
 }
-
 //----------- HOME END------------ //
 
+
+//----------- ABOUT START------------ //
+// banner
+export const getAboutBanner = async ()=> {
+
+  try {
+   const res =await fetch(`${API_BASE_URL}/website/open/read/getpagedatafacts/about`);
+
+   const data = await res.json();
+   return data?.response
+  }catch(error){
+    console.log(error)
+  }
+
+}
+//----------- ABOUT END------------ //
 
 
 //----------- SEO START------------ //
