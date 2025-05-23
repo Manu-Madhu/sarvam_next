@@ -31,7 +31,7 @@ const Navbar = () => {
       </div>
 
       {/* Nav Bar */}
-      <div className="shadow-xl">
+      <div className="shadow-2xl z-50">
         <ContainerWrapper className="flex gap-5 items-center justify-between p-3 py-5">
           <div className="w-full">
             <Image

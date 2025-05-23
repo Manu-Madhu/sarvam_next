@@ -2,7 +2,7 @@ import { Poppins, Teko } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/common/Nav";
 import Footer from "@/components/common/Footer";
-import { getSeoData } from "@/utils/api";
+import { getSeoData } from "@/service/api";
 
 const poppins = Poppins({
   subsets: ["latin"],

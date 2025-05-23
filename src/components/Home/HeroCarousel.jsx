@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { getMainSlider } from "@/utils/api";
+import { getMainSlider } from "@/service/api";
 
 const HeroCarousel = () => {
   const [slides, setSlides] = useState([]);
