@@ -22,3 +22,14 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.custom-html-content p {
+  margin-bottom: 1rem; 
+}
+
+@media (max-width: 640px) {
+  .custom-html-content p {
+    margin-bottom: 1rem;
+  }
+}

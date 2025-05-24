@@ -1,3 +1,4 @@
+import AboutSection from "@/components/about/AboutSection";
 import CommonBanner from "@/components/common/CommonBanner";
 import { getAboutBanner } from "@/service/api";
 import { buildSeoMetadata } from "@/service/seohelper";
@@ -20,6 +21,9 @@ const About = async () => {
         title={pageData.pge_title}
         subtitle={pageData.pge_subtitle}
       />
+
+      {/* About part */}
+      <AboutSection />
     </div>
   );
 };
