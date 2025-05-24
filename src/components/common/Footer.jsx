@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         {/* Middle Column - Nav Links */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 text-[#7E879C] text-[14px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 text-[#7E879C] text-[14px] mt-8">
           {[
             [
               "Home",
