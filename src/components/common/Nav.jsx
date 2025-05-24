@@ -23,9 +23,15 @@ const Navbar = () => {
               />
               <BsSearch className="absolute right-2 top-2 text-[#212529]" />
             </div>
+            <Link href={'/track-order'}>
             <div className="hidden md:block text-nowrap">Track order</div>
+            </Link>
+            <Link href={'/signup'}>
             <div className="hidden md:block">Register</div>
+            </Link>
+            <Link href={'/signin'}>
             <div className="hidden md:block">Login</div>
+            </Link>
           </div>
         </ContainerWrapper>
       </div>
