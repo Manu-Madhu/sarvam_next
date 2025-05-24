@@ -29,7 +29,7 @@ body {
 .heading_font {
   font-weight: 600;
   font-family: var(--font-poppins);
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   line-height: calc(var(--spacing) * 9);
   font-size: 30px;
 }

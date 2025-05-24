@@ -17,7 +17,7 @@ const Mission_Vision = async () => {
         {/* Our vision */}
         <div className="flex flex-col md:flex-row">
           <div className="w-full">
-            <h2 className="heading_font">
+            <h2 className="heading_font text-primary">
               {getVision.log_title}
             </h2>
             <div
@@ -51,7 +51,7 @@ const Mission_Vision = async () => {
             />
           </div>
           <div className="w-full">
-            <h2 className="heading_font">
+            <h2 className="heading_font text-primary">
               {getMission.log_title}
             </h2>
             <div
