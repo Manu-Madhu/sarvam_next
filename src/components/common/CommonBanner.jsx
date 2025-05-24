@@ -12,7 +12,7 @@ const CommonBanner = ({ className, title, banner, subtitle }) => {
       <ContainerWrapper
         className={"p-3 flex flex-col w-full h-full items-start text-white pt-5 md:pt-12"}
       >
-        <h1 className="z-20 text-[20px] md:text-[50px] font-sans font-semibold md:font-bold">
+        <h1 className="z-20 text-[20px] md:text-[50px] font-sans font-semibold ">
           {title}
         </h1>
         <div className="flex items-center justify-center z-20 text-[16px] md:text-[22px] font-semibold">
