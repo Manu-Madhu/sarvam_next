@@ -27,26 +27,70 @@ export async function getSupplier() {
 
   const data = await res.json();
 
-  return data?.response?.data;
+  return data.response.data;
 }
 //----------- HOME END------------ //
 
 
+
 //----------- ABOUT START------------ //
 // banner
-export const getAboutBanner = async ()=> {
-
+export const getAboutBanner = async () => {
   try {
-   const res =await fetch(`${API_BASE_URL}/website/open/read/getpagedatafacts/about`);
+    const res = await fetch(
+      `${API_BASE_URL}/website/open/read/getpagedatafacts/about`
+    );
 
-   const data = await res.json();
-   return data?.response
-  }catch(error){
-    console.log(error)
+    const data = await res.json();
+    return data.response;
+  } catch (error) {
+    console.log(error);
   }
+};
 
-}
+// get about data
+export const getAboutData = async () => {
+  try {
+    const res = await fetch(
+      `${API_BASE_URL}/website/open/read/fetchaboutusmain`
+    );
+    const data = await res.json();
+
+    return data.response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// get mission data
+export const getMiData = async () => {
+  try {
+    const res = await fetch(
+      `${API_BASE_URL}/website/open/read/fetchaboutusvission` //route have naming mistake
+    );
+    const data = await res.json();
+
+    return data.response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// get vission data
+export const getViData = async () => {
+  try {
+    const res = await fetch(
+      `${API_BASE_URL}/website/open/read/fetchaboutusmission` //route have naming mistake
+    );
+    const data = await res.json();
+
+    return data.response;
+  } catch (error) {
+    console.log(error);
+  }
+};
 //----------- ABOUT END------------ //
+
 
 
 //----------- SEO START------------ //

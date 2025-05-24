@@ -47,7 +47,7 @@ const Navbar = () => {
             <ul className="flex gap-5 md:gap-10 font-mono text-[22px]">
               {NavData.map(item =>
                 <li className="hidden md:block" key={item.id}>
-                  <Link className="text-nowrap" title={item.name} href={item.link}>
+                  <Link className="text-nowrap hover:text-primary ease-in-out duration-300" title={item.name} href={item.link}>
                     {item.name}
                   </Link>
                 </li>

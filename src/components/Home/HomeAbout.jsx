@@ -38,7 +38,7 @@ const HomeAbout = () => {
           />
         </div>
         <div className=" w-full h-full space-y-5 md:space-y-8 max-w-2xl mx-auto md:px-4 sm:px-6 lg:pl-8 ">
-          <p className="text-[16px] font-sans font-medium pt-2 leading-7 ">
+          <p className="text-[16px] font-sans font-medium pt-2 leading-6 text-justify">
             {`Sarvam Safety Equipment Private Limited epitomizes the wholeness of
             our core competencies, which complements our name, which is a
             Sanskrit term that means "all" or "complete." Our manpower, service,
