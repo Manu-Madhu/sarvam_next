@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,14 +8,16 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { NavData } from "@/utils/Nav";
 import { LuMenu } from "react-icons/lu";
 import ContainerWrapper from "./ui/ContainerWrapper.jsx";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
   return (
     <main>
       {/* top part */}
       <div className="bg-primary p-3.5 font-sans">
         <ContainerWrapper className={""}>
-          <div className="flex md:justify-end items-center md:gap-10 text-[14px] font-[500] text-white">
+          <div className="flex md:justify-end items-center md:gap-5 text-[14px] font-[500] text-white">
             <div className="relative md:mr-6 w-full md:w-fit">
               <input
                 type="text"
@@ -23,14 +26,25 @@ const Navbar = () => {
               />
               <BsSearch className="absolute right-2 top-2 text-[#212529]" />
             </div>
-            <Link href={'/track-order'}>
-            <div className="hidden md:block text-nowrap">Track order</div>
+            <Link
+              href={"/track-order"}
+              className="hover:bg-[#424649] ease-in-out duration-500 rounded p-1 px-3"
+            >
+              <div className="hidden md:block text-nowrap text-sm">
+                Track order
+              </div>
             </Link>
-            <Link href={'/signup'}>
-            <div className="hidden md:block">Register</div>
+            <Link
+              href={"/signup"}
+              className="hover:bg-[#424649] ease-in-out duration-500 rounded p-1 px-3"
+            >
+              <div className="hidden md:block">Register</div>
             </Link>
-            <Link href={'/signin'}>
-            <div className="hidden md:block">Login</div>
+            <Link
+              href={"/signin"}
+              className="hover:bg-[#424649] ease-in-out duration-500 rounded p-1 px-3"
+            >
+              <div className="hidden md:block">Login</div>
             </Link>
           </div>
         </ContainerWrapper>
@@ -53,7 +67,14 @@ const Navbar = () => {
             <ul className="flex gap-5 md:gap-10 font-mono text-[22px]">
               {NavData.map(item =>
                 <li className="hidden md:block" key={item.id}>
-                  <Link className="text-nowrap hover:text-primary ease-in-out duration-300" title={item.name} href={item.link}>
+                  <Link
+                    title={item.name}
+                    href={item.link}
+                    className={`text-nowrap ease-in-out duration-300 ${pathname ===
+                    item.link
+                      ? "text-primary "
+                      : "hover:text-primary"}`}
+                  >
                     {item.name}
                   </Link>
                 </li>

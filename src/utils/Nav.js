@@ -22,7 +22,7 @@ export const NavData = [
   {
     id: 5,
     name: "Updates",
-    link: "/",
+    link: "/updates",
     subNav: [
       {
         id: 1,
