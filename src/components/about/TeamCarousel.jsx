@@ -66,7 +66,7 @@ export default function TeamCarousel() {
                 <div key={member.tme_id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 px-3">
                   <div className="transition-shadow duration-300 border-0">
                     <div className="md:p-3 text-center">
-                      <div className="mb-6">
+                      <div className="mb-5">
                         <div className="relative w-full h-54 mx-auto mb-4 overflow-hidden rounded-lg ">
                           <Image
                             src={member.tme_propic ? `${IMAGE_ENDPOINT}${member.tme_propic}` : "/placeholder.svg"}

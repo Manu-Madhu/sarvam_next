@@ -3,7 +3,7 @@ import React from "react";
 
 const LoginForm = () => {
   return (
-    <div className=" flex  justify-center pb-28  px-4 mt-16">
+    <div className=" flex  justify-center pb-28  px-4 mt-16 font-sans">
       <div className="bg-[#F8F9FA] rounded-xl shadow-sm p-8 w-full max-w-[636px] h-[488px]">
         {/* Title */}
         <h2 className="md:text-[28px] text-[23px] font-semibold text-[#848484] mb-16">
