@@ -10,7 +10,6 @@ const AboutSection = async () => {
   if (!getData) {
     return <p className="text-red-500">Failed to load content.</p>;
   }
-  console.log(getData);
   return (
     <ContainerWrapper className="flex flex-col md:flex-row p-3 md:gap-7 my-7 mb-14 md:my-14 font-sans ">
       <div className="w-full">

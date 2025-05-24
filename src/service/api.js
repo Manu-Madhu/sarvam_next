@@ -31,8 +31,6 @@ export async function getSupplier() {
 }
 //----------- HOME END------------ //
 
-
-
 //----------- ABOUT START------------ //
 // banner
 export const getAboutBanner = async () => {
@@ -89,9 +87,33 @@ export const getViData = async () => {
     console.log(error);
   }
 };
+
+// get Meet Team title
+export const getMeetTeam = async () => {
+  try {
+    const res = await fetch(
+      `${API_BASE_URL}/website/open/read/fetcheadingseven`
+    );
+    const data = await res.json();
+
+    return data.response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// get Team data
+export const getTeamData = async () => {
+  try {
+    const res = await fetch(`${API_BASE_URL}/website/open/read/teamdata`);
+    const data = await res.json();
+    return data.response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 //----------- ABOUT END------------ //
-
-
 
 //----------- SEO START------------ //
 export async function getSeoData(page = "home") {
@@ -126,3 +148,15 @@ export async function getSeoData(page = "home") {
   }
 }
 //----------- SEO END------------ //
+
+// COMMON API CALL
+export const CommonFetch = async (endpoint) => {
+  try {
+    const res = await fetch(`${API_BASE_URL}${endpoint}`);
+    const data = await res.json();
+
+    return data.response;
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -11,13 +11,13 @@ const Mission_Vision = async () => {
     <div className="bg-[#f5f5f5]">
       <ContainerWrapper
         className={
-          "h-full p-3 flex gap-5 md:gap-10 flex-col py-7 md:py-14 overflow-hidden relative"
+          "h-full p-3 flex gap-5 md:gap-10 flex-col py-14 overflow-hidden relative"
         }
       >
         {/* Our vision */}
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-0">
           <div className="w-full">
-            <h2 className="heading_font text-primary">
+            <h2 className="heading_font text-[#848484]">
               {getVision.log_title}
             </h2>
             <div
@@ -33,13 +33,13 @@ const Mission_Vision = async () => {
               title={getVision.log_title}
               width={1280}
               height={720}
-              className="h-[300px] object-cover md:w-[87%]"
+              className="md:h-[300px] object-cover md:w-[87%]"
             />
           </div>
         </div>
 
         {/* Our mission */}
-        <div className="flex flex-col md:flex-row ">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-0">
           <div className="w-full flex items-start justify-start ">
             <Image
               src={`${API_BASE_URL}/site/${getMission.log_imgone}`}
@@ -47,11 +47,11 @@ const Mission_Vision = async () => {
               title={getMission.log_title}
               width={1280}
               height={720}
-              className="h-[300px] object-cover md:w-[87%]"
+              className="md:h-[300px] object-cover md:w-[87%]"
             />
           </div>
           <div className="w-full">
-            <h2 className="heading_font text-primary">
+            <h2 className="heading_font text-[#848484]">
               {getMission.log_title}
             </h2>
             <div

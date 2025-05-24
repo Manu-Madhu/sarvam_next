@@ -1,7 +1,8 @@
 import AboutSection from "@/components/about/AboutSection";
+import Carousal from "@/components/about/Carousal";
 import Mission_Vision from "@/components/about/Mission_Vision";
 import CommonBanner from "@/components/common/CommonBanner";
-import { getAboutBanner } from "@/service/api";
+import { getAboutBanner, getMeetTeam, getTeamData } from "@/service/api";
 import { buildSeoMetadata } from "@/service/seohelper";
 import { API_BASE_URL } from "@/utils/endPoints";
 import React from "react";
@@ -13,6 +14,7 @@ export async function generateMetadata() {
 
 const About = async () => {
   const pageData = await getAboutBanner();
+  const meetTeam = await getMeetTeam();
 
   return (
     <div>
@@ -28,6 +30,9 @@ const About = async () => {
 
       {/* mission and vision */}
       <Mission_Vision />
+
+      {/* Carousal */}
+      <Carousal teamData={meetTeam}/>
     </div>
   );
 };
