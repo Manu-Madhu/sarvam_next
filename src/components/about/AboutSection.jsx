@@ -12,9 +12,9 @@ const AboutSection = async () => {
   }
   console.log(getData);
   return (
-    <ContainerWrapper className="flex flex-col md:flex-row p-3 md:gap-7 my-14 font-sans ">
+    <ContainerWrapper className="flex flex-col md:flex-row p-3 md:gap-7 my-7 mb-14 md:my-14 font-sans ">
       <div className="w-full">
-        <h2 className="font-[600] text-[26px] md:text-[30px] text-primary leading-9 mt-2 md:w-[90%]">
+        <h2 className="heading_font mt-2 md:w-[90%]">
           {getData.log_title}
         </h2>
         <div

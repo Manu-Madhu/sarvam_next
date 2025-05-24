@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-color: #8BC34A;
+  --primary-color: #8bc34a;
 }
 
 @theme inline {
@@ -23,9 +23,41 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ---------------COMMON-------------------- */
+
+/* Window Screen */
+.heading_font {
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--primary-color);
+  line-height: calc(var(--spacing) * 9);
+  font-size: 30px;
+}
+
+.paragraphs {
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: #000;
+  line-height: calc(var(--spacing) * 6);
+  font-size: 15px;
+  text-align: justify;
+}
+
+/* Mobile Screen */
+@media (max-width: 640px) {
+  .heading_font {
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--primary-color);
+    line-height: calc(var(--spacing) * 9);
+    font-size: 26px;
+  }
+}
+
+/* ---------------COMMON END HERE----------- */
 
 .custom-html-content p {
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 640px) {

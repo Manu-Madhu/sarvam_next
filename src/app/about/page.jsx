@@ -1,4 +1,5 @@
 import AboutSection from "@/components/about/AboutSection";
+import Mission_Vision from "@/components/about/Mission_Vision";
 import CommonBanner from "@/components/common/CommonBanner";
 import { getAboutBanner } from "@/service/api";
 import { buildSeoMetadata } from "@/service/seohelper";
@@ -24,6 +25,9 @@ const About = async () => {
 
       {/* About part */}
       <AboutSection />
+
+      {/* mission and vision */}
+      <Mission_Vision />
     </div>
   );
 };

@@ -31,6 +31,8 @@ export async function getSupplier() {
 }
 //----------- HOME END------------ //
 
+
+
 //----------- ABOUT START------------ //
 // banner
 export const getAboutBanner = async () => {
@@ -59,7 +61,37 @@ export const getAboutData = async () => {
     console.log(error);
   }
 };
+
+// get mission data
+export const getMiData = async () => {
+  try {
+    const res = await fetch(
+      `${API_BASE_URL}/website/open/read/fetchaboutusvission` //route have naming mistake
+    );
+    const data = await res.json();
+
+    return data.response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// get vission data
+export const getViData = async () => {
+  try {
+    const res = await fetch(
+      `${API_BASE_URL}/website/open/read/fetchaboutusmission` //route have naming mistake
+    );
+    const data = await res.json();
+
+    return data.response;
+  } catch (error) {
+    console.log(error);
+  }
+};
 //----------- ABOUT END------------ //
+
+
 
 //----------- SEO START------------ //
 export async function getSeoData(page = "home") {
