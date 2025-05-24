@@ -34,18 +34,17 @@ const Footer = () => {
           <div className="flex items-start gap-6 text-[#7E879C]">
             <FaEnvelope size={20} className="text-primary mt-1" />
             <p>
-              onlinesales@sarvamsafety.com <br />
+              onlinesales@sarvamsafety.com |
               Hrd@sarvamsafety.com
             </p>
           </div>
 
           <div className="flex items-start gap-6 text-[#7E879C]">
-            <FaPhoneAlt size={30} className="text-primary mt-1" />
+            <FaPhoneAlt size={20} className="text-primary mt-1" />
             <p>
-              Customer Care: 044 4555 3337/2227 <br />
-              +91 98402 23242 <br />
-              Enquiry: +91 98408 72666 <br />
-              HR: +91 95001 73254
+              Customer Care: 044 4555 3337/2227 | +91 98402 23242 | Enquiry: <br />
+               +91 98408 72666 | HR: +91 95001 73254  <br />
+              
             </p>
           </div>
 
