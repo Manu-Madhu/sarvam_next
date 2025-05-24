@@ -12,7 +12,6 @@ export async function generateMetadata() {
 const About = async () => {
   const pageData = await getAboutBanner();
 
-  console.log(pageData);
   return (
     <div>
       {/*  Banner */}
