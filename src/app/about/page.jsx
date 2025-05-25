@@ -2,9 +2,8 @@ import AboutSection from "@/components/about/AboutSection";
 import Carousal from "@/components/about/Carousal";
 import Mission_Vision from "@/components/about/Mission_Vision";
 import CommonBanner from "@/components/common/CommonBanner";
-import { getAboutBanner, getMeetTeam, getTeamData } from "@/service/api";
+import { getAboutBanner, getMeetTeam} from "@/service/api";
 import { buildSeoMetadata } from "@/service/seohelper";
-import { API_BASE_URL } from "@/utils/endPoints";
 import React from "react";
 
 // SEO Part
@@ -20,7 +19,7 @@ const About = async () => {
     <div>
       {/*  Banner */}
       <CommonBanner
-        banner={`${API_BASE_URL}/site/${pageData.pge_banner}`}
+        banner={pageData.pge_banner}
         title={pageData.pge_title}
         subtitle={pageData.pge_subtitle}
       />

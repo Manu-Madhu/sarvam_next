@@ -42,6 +42,7 @@ export async function generateMetadata() {
     title: seoData.title,
     description: seoData.description,
     keywords: seoData.keywords,
+    metadataBase: new URL('https://www.sarvamsafety.com/'),
     alternates: {
       canonical: "https://www.sarvamsafety.com/"
     },

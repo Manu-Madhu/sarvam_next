@@ -11,7 +11,7 @@ const AboutSection = async () => {
     return <p className="text-red-500">Failed to load content.</p>;
   }
   return (
-    <ContainerWrapper className="flex flex-col md:flex-row p-3 md:gap-7 my-7 mb-14 md:my-14 font-sans ">
+    <ContainerWrapper className="flex flex-col md:flex-row p-3 md:gap-7 my-7 mb-14 md:my-14 font-sans">
       <div className="w-full">
         <h2 className="heading_font text-primary mt-2 md:w-[90%]">
           {getData.log_title}

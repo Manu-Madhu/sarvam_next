@@ -28,6 +28,7 @@ const Navbar = () => {
             </div>
             <Link
               href={"/track-order"}
+              title="track-order"
               className="hover:bg-[#424649] ease-in-out duration-500 rounded p-1 px-3"
             >
               <div className="hidden md:block text-nowrap text-sm">
@@ -36,12 +37,14 @@ const Navbar = () => {
             </Link>
             <Link
               href={"/signup"}
+              title="signup"
               className="hover:bg-[#424649] ease-in-out duration-500 rounded p-1 px-3"
             >
               <div className="hidden md:block">Register</div>
             </Link>
             <Link
               href={"/signin"}
+              title="signin"
               className="hover:bg-[#424649] ease-in-out duration-500 rounded p-1 px-3"
             >
               <div className="hidden md:block">Login</div>
@@ -70,10 +73,12 @@ const Navbar = () => {
                   <Link
                     title={item.name}
                     href={item.link}
-                    className={`text-nowrap ease-in-out duration-300 ${pathname ===
-                    item.link
-                      ? "text-primary "
-                      : "hover:text-primary"}`}
+                    className={`text-nowrap ease-in-out duration-300 ${item.link ===
+                    "/"
+                      ? pathname === "/" ? "text-primary" : "hover:text-primary"
+                      : pathname.startsWith(item.link)
+                        ? "text-primary"
+                        : "hover:text-primary"}`}
                   >
                     {item.name}
                   </Link>
