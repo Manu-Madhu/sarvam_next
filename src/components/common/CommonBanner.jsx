@@ -1,14 +1,15 @@
 import classNames from "classnames";
-import { RiHome2Fill } from "react-icons/ri";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import React from "react";
 import ContainerWrapper from "./ui/ContainerWrapper";
 import Image from "next/image";
+import { RiHome2Fill } from "react-icons/ri";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { IMAGE_ENDPOINT } from "@/utils/endPoints";
 
 const CommonBanner = ({ className, title, banner, subtitle }) => {
   return (
-    <div className={classNames(  "relative lg:h-[35vh] w-full bg-cover bg-no-repeat",className )} >
-      <Image src={banner} fill className="object-container lg:object-cover w-full absolute left-0 top-0 -z-0" alt={title} title={title} />
+    <div className={classNames(  " relative lg:h-[37vh] w-full bg-cover bg-no-repeat ",className )} >
+      <Image src={`${IMAGE_ENDPOINT}${banner}`}  alt={subtitle} title={title} fill className="object-container lg:object-cover w-full absolute left-0 top-0 -z-0" />
       <ContainerWrapper
         className={"p-3 flex flex-col w-full h-full items-start text-white pt-5 md:pt-12"}
       >

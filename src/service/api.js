@@ -31,6 +31,8 @@ export async function getSupplier() {
 }
 //----------- HOME END------------ //
 
+
+
 //----------- ABOUT START------------ //
 // banner
 export const getAboutBanner = async () => {
@@ -43,6 +45,7 @@ export const getAboutBanner = async () => {
     return data.response;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
@@ -57,6 +60,7 @@ export const getAboutData = async () => {
     return data.response;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
@@ -71,6 +75,7 @@ export const getMiData = async () => {
     return data.response;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
@@ -85,6 +90,7 @@ export const getViData = async () => {
     return data.response;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
@@ -99,6 +105,7 @@ export const getMeetTeam = async () => {
     return data.response;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
 
@@ -110,10 +117,44 @@ export const getTeamData = async () => {
     return data.response;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
-
 //----------- ABOUT END------------ //
+
+
+
+//----------- ELITE START------------ //
+export const getAllEliteData = async ({ skp = 0, lmt = 16 } = {}) => {
+  try {
+    const res = await fetch(`${API_BASE_URL}/website/open/read/getelitedata`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({
+        skp,
+        lmt,
+        searchKey: "",
+        slOrder: "DESC",
+        status: "All"
+      })
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch elite data");
+    }
+
+    const data = await res.json();
+    return data.response;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+//----------- ELITE END------------ //
+
+
 
 //----------- SEO START------------ //
 export async function getSeoData(page = "home") {
@@ -149,8 +190,10 @@ export async function getSeoData(page = "home") {
 }
 //----------- SEO END------------ //
 
+
+
 // COMMON API CALL
-export const CommonFetch = async (endpoint) => {
+export const CommonFetch = async endpoint => {
   try {
     const res = await fetch(`${API_BASE_URL}${endpoint}`);
     const data = await res.json();
@@ -158,5 +201,6 @@ export const CommonFetch = async (endpoint) => {
     return data.response;
   } catch (error) {
     console.log(error);
+    return null;
   }
 };
